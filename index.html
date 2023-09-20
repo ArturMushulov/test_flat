@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Main</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script
+            src="https://api-maps.yandex.ru/2.1/?apikey=e838cf75-7519-482a-8891-4f93ca0c9882&lang=ru_RU"
+            type="text/javascript"
+        ></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="mobile_menu">
+                    <div class="menu_icon">
+                        <button class="mobile_menu__btn">
+                            <img
+                                src="./src/icons/menu-button_icon-icons.com_72989.png"
+                                alt="mobile_menu"
+                            />
+                        </button>
+                    </div>
+                </div>
+                <div class="header_logo">
+                    <img src="./src/img/Rectangle.png" alt="logo" />
+                </div>
+                <nav class="header_nav">
+                    <ul class="nav_lists">
+                        <li class="nav_list__menu">
+                            <span>МЕНЮ</span>
+                        </li>
+                        <li class="nav_list__portfolio">
+                            <span>ПОРТФОЛИО</span>
+                        </li>
+                        <li class="nav_list__price">
+                            <span>ЦЕНА</span>
+                        </li>
+                        <li class="nav_list__work">
+                            <span>СХЕМА РАБОТЫ</span>
+                        </li>
+                        <li class="nav_list__reviews">
+                            <span>ОТЗЫВЫ</span>
+                        </li>
+                        <li class="nav_list__contacts">
+                            <span>КОНТАКТЫ</span>
+                        </li>
+                        <li class="nav_list__ garantee">
+                            <span>ГАРАНТИЯ</span>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header_callback">
+                    <button class="callback_btn">ОБРАТНЫЙ ЗВОНОК</button>
+                    <button class="callback_mobile__btn">
+                        <img
+                            src="./src/icons/4014701-avatar-call-mobile-operator-service-support_112884.png"
+                            alt="callback_mobile"
+                        />
+                    </button>
+                </div>
+            </header>
+            <div class="content">
+                <div class="content_left">
+                    <div class="title">
+                        <h1>Ремонт под ключ от 2900 руб/м2.</h1>
+                    </div>
+                    <div class="subtitle">
+                        <h2>
+                            При заказе ремонта делаем дизайн-проект в подарок
+                        </h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="description">
+                        <ul class="description_lists">
+                            <li class="description_list">
+                                <img src="./src/icons/Frame.png" alt="drive" />
+                                <span>Бесплатный выезд в день обращения</span>
+                            </li>
+                            <li class="description_list">
+                                <img
+                                    src="./src/icons/Frame (2).png"
+                                    alt="garantee"
+                                />
+                                <span>Гарантия на работу до 5 лет</span>
+                            </li>
+                            <li class="description_list">
+                                <img
+                                    src="./src/icons/Frame (1).png"
+                                    alt="beInTime"
+                                />
+                                <span>Жесткое соблюдение сроков</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_right">
+                    <div class="img">
+                        <img
+                            id="img"
+                            src="./src/img/Rectangle (1).png"
+                            alt="flat"
+                        />
+                    </div>
+                    <div class="scroll">
+                        <button class="scroll_btn">&darr;</button>
+                        <span>SCROLL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal d-none">
+                <div class="modal_title">
+                    <h2>Расчитать стоймость ремонта</h2>
+                </div>
+                <div class="modal_range">
+                    <div class="modal_range__title">
+                        <label for="square">Площадь квартиры:</label>
+                        <p>
+                            <output id="value"></output> м<sup
+                                ><small>2</small></sup
+                            >
+                        </p>
+                    </div>
+                    <input
+                        type="range"
+                        id="square"
+                        name="square"
+                        min="0"
+                        max="100"
+                        class="range_input"
+                    />
+                </div>
+                <div class="types">
+                    <form class="types_form">
+                        <legend>ТИП ЖИЛЬЯ</legend>
+                        <div class="type">
+                            <div class="house">
+                                <input
+                                    type="radio"
+                                    id="house"
+                                    name="type"
+                                    value="Вторичное жилье"
+                                />
+                                <label for="house">Вторичное жилье</label>
+                            </div>
+                            <div class="new">
+                                <input
+                                    type="radio"
+                                    id="new"
+                                    name="type"
+                                    value="Новостройка"
+                                />
+                                <label for="new">Новостройка</label>
+                            </div>
+                            <div class="office">
+                                <input
+                                    type="radio"
+                                    id="office"
+                                    name="type"
+                                    value="Офис"
+                                />
+                                <label for="office">Офис</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="rooms">
+                    <form>
+                        <legend>КОЛ-ВО КОМНАТ:</legend>
+                        <div class="room">
+                            <div class="one">
+                                <input
+                                    type="radio"
+                                    id="one"
+                                    name="room"
+                                    value="1"
+                                />
+                                <label for="house">1</label>
+                            </div>
+                            <div class="two">
+                                <input
+                                    type="radio"
+                                    id="two"
+                                    name="room"
+                                    value="2"
+                                />
+                                <label for="new">2</label>
+                            </div>
+                            <div class="three">
+                                <input
+                                    type="radio"
+                                    id="three"
+                                    name="room"
+                                    value="3"
+                                />
+                                <label for="office">3+</label>
+                            </div>
+                            <div class="atelier">
+                                <input
+                                    type="radio"
+                                    id="atelier"
+                                    name="room"
+                                    value="Студия"
+                                />
+                                <label for="office">Студия</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="submit">
+                    <button class="submit_btn">ОТПРАВИТЬ</button>
+                </div>
+            </div>
+            <div class="find_for__article">
+                <h3>Поиск по артикулу</h3>
+                <input
+                    type="text"
+                    id="articleInput"
+                    placeholder="Введите артикул"
+                />
+                <button id="searchButton">Отправить</button>
+                <table class="resultTable" id="resultTable"></table>
+            </div>
+            <div class="popup_wrapper">
+                <button class="open_popup__btn" id="openPopupButton">
+                    Открыть всплывающее окно
+                </button>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" id="closePopupButton">×</span>
+                        <h2>Введите вашу почту</h2>
+                        <input
+                            type="email"
+                            id="emailInput"
+                            placeholder="Введите почту"
+                        />
+                        <button id="sendButton">Отправить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="yamap">
+                <div id="map"></div>
+            </div>
+        </div>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
